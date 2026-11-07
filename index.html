@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0E2436">
+<title>مَراسي — لوجستيات الموانئ والشحن في ميناء حمد، الدوحة</title>
+<meta name="description" content="مَراسي مشغّل لوجستيات بحرية وبرّية في قطر: حجز على الخط الرئيسي، تفريغ، تخليص جمركي، تخزين مؤقَّت وتوصيل إلى الباب — بجدول إبحار معلن وأداة حساب سعر فورية.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Kufi+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">تخطَّ إلى المحتوى</a>
+
+<header class="topbar" id="topbar">
+  <div class="wrap topbar__inner">
+    <a class="brand" href="#top" aria-label="مَراسي — الصفحة الرئيسية">
+      <span class="brand__mark" aria-hidden="true">
+        <svg viewBox="0 0 34 34" width="30" height="30" focusable="false">
+          <circle cx="17" cy="7.5" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
+          <path d="M17 11.5V27" fill="none" stroke="currentColor" stroke-width="2"/>
+          <path d="M8 16.5h18" fill="none" stroke="currentColor" stroke-width="2"/>
+          <path d="M6 20c0 5.2 5 8.5 11 8.5S28 25.2 28 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="17" cy="13.5" r="1.7" fill="currentColor"/>
+        </svg>
+      </span>
+      <span class="brand__word">
+        <span class="brand__name">مَراسي</span>
+        <span class="brand__sub num">MARASI · QA</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="التنقل الرئيسي">
+      <a href="#services">الخدمات</a>
+      <a href="#network">الخطوط</a>
+      <a href="#track">التتبّع</a>
+      <a href="#customs">الجمارك</a>
+      <a href="#estimate">حاسبة الشحن</a>
+    </nav>
+    <div class="topbar__actions">
+      <a class="btn btn--ghost btn--sm" href="#track">تتبّع شحنة</a>
+      <a class="btn btn--solid btn--sm" href="#estimate">اطلب عرض سعر</a>
+    </div>
+    <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="mobileNav" aria-label="افتح قائمة التنقل">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-nav" id="mobileNav" hidden>
+    <a href="#services">الخدمات</a>
+    <a href="#network">الخطوط</a>
+    <a href="#track">تتبّع شحنة</a>
+    <a href="#customs">الجمارك والتخليص</a>
+    <a href="#estimate">حاسبة الشحن</a>
+    <a class="btn btn--solid" href="#estimate">اطلب عرض سعر</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="wrap hero__grid">
+      <div class="hero__copy">
+        <p class="chip" data-reveal><span class="chip__dot"></span> ميناء حمد · الدوحة، قطر — <span class="num">GMT+3</span></p>
+        <h1 data-reveal>نُشغّل الشحن من الرصيف<br>إلى باب مستودعك — بخطٍّ واحد.</h1>
+        <p class="lede" data-reveal>مَراسي مشغّل لوجستيات بحرية وبرّية: حجز على الخط الرئيسي أو ناقلات التغذية، تفريغ من السفينة، تخليص جمركي، تخزين في المستودع المؤقَّت، ثم توصيل إلى الموقع — بعقد واحد وسجلٍّ واحد. ترى الموعد، تتبّع الحاوية، وتحصل على تقدير سعر قبل أن تتصل بنا.</p>
+        <div class="hero__cta" data-reveal>
+          <a class="btn btn--solid btn--lg" href="#estimate">احسب سعر شحنتك</a>
+          <a class="btn btn--link" href="#track">تتبّع حاوية<span aria-hidden="true"> ←</span></a>
+        </div>
+        <ul class="hero__notes" data-reveal>
+          <li>تقدير فوري داخل المتصفح</li>
+          <li>نوافذ إبحار منشورة أسبوعيًا</li>
+          <li>تخليص خلال <bdi>4</bdi> ساعات عمل للمستندات المكتملة</li>
+        </ul>
+      </div>
+
+      <div class="hero__visual" data-reveal>
+        <div class="sched">
+          <div class="sched__head">
+            <div>
+              <p class="sched__eyebrow">جدول المغادرة · المحطة <span class="num">3</span></p>
+              <h2 class="sched__title">إبحار هذا الأسبوع</h2>
+            </div>
+            <span class="sched__live"><span class="sched__live-dot"></span> محدّث <span class="num">11:32</span></span>
+          </div>
+          <div class="sched__scroll">
+            <table class="sched__table">
+              <thead>
+                <tr>
+                  <th scope="col">الرحلة</th>
+                  <th scope="col">السفينة</th>
+                  <th scope="col">الوجهة</th>
+                  <th scope="col">المغادرة</th>
+                  <th scope="col">الحالة</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><bdi class="num">MR-2148</bdi></td>
+                  <td>الريان<span class="sched__berth">B2</span></td>
+                  <td>جبل علي<small>الإمارات</small></td>
+                  <td class="dep"><bdi class="num">18:00</bdi><small><bdi class="num">15</bdi> نوفمبر</small></td>
+                  <td><span class="st st--on">على الموعد</span></td>
+                </tr>
+                <tr>
+                  <td><bdi class="num">MR-2153</bdi></td>
+                  <td>أم صلال<span class="sched__berth">C4</span></td>
+                  <td>الدمام<small>السعودية</small></td>
+                  <td class="dep"><bdi class="num">06:30</bdi><small><bdi class="num">16</bdi> نوفمبر</small></td>
+                  <td><span class="st st--on">على الموعد</span></td>
+                </tr>
+                <tr>
+                  <td><bdi class="num">MR-2156</bdi></td>
+                  <td>الوعب<span class="sched__berth">A1</span></td>
+                  <td>موندرا<small>الهند</small></td>
+                  <td class="dep"><bdi class="num">21:45</bdi><small><bdi class="num">17</bdi> نوفمبر</small></td>
+                  <td><span class="st st--live">صعود الحمولة</span></td>
+                </tr>
+                <tr>
+                  <td><bdi class="num">MR-2159</bdi></td>
+                  <td>الخور<span class="sched__berth">B5</span></td>
+                  <td>جدة<small>السعودية</small></td>
+                  <td class="dep"><bdi class="num">14:00</bdi><small><bdi class="num">19</bdi> نوفمبر</small></td>
+                  <td><span class="st st--sched">مجدولة</span></td>
+                </tr>
+                <tr>
+                  <td><bdi class="num">MR-2162</bdi></td>
+                  <td>الشحانية<span class="sched__berth">D1</span></td>
+                  <td>روتردام<small>هولندا</small></td>
+                  <td class="dep"><bdi class="num">09:15</bdi><small><bdi class="num">22</bdi> نوفمبر</small></td>
+                  <td><span class="st st--sched">مجدولة</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="sched__foot">مواعيد توضيحية لنموذج عرض · بتوقيت الدوحة وقد تتغيّر حسب الطقس وجدول الخط الناقل.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST -->
+  <section class="trust">
+    <div class="wrap">
+      <p class="trust__label">جهات تعتمد على مَراسي في جدولها الشهري</p>
+      <ul class="trust__list">
+        <li>الفيّحاء للتجزئة</li>
+        <li>سنا للمقاولات</li>
+        <li>مصنع البوليمر القطري</li>
+        <li>الإمداد الطبي الحديث</li>
+        <li>مخابز الوفاء</li>
+        <li>النخيل للتوزيع</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section" id="services">
+    <div class="wrap">
+      <p class="eyebrow">الخدمات</p>
+      <h2 class="section__title">خمس خطوط تشغيلية، تُستخدم منفردة أو متتابعة.</h2>
+      <div class="services">
+        <article class="svc" data-reveal>
+          <span class="svc__tag num">IMPORT</span>
+          <h3>الاستيراد</h3>
+          <p>حجز مساحة على الخط الرئيسي أو ناقلات التغذية، مع متابعه الوصول حتى تفريغ الحاوية وإخراجها من الرصيف.</p>
+          <ul>
+            <li>حمولة كاملة <bdi>FCL</bdi> وتجزيء <bdi>LCL</bdi></li>
+            <li>حاويات مبرّدة ومراقبة الرطوبة</li>
+            <li>إشعار وصول آلي قبل الرسو بـ <bdi>48</bdi> ساعة</li>
+          </ul>
+        </article>
+        <article class="svc" data-reveal>
+          <span class="svc__tag num">EXPORT</span>
+          <h3>التصدير</h3>
+          <p>تجهيز الحمولة من المنشأة، وتوثيقها، وتحميلها على الرحلة المختارة مع بيان شحن مطابق لمتطلبات ميناء الوصول.</p>
+          <ul>
+            <li>تجميع من <bdi>3</bdi> مواقع في نفس الرحلة</li>
+            <li>مطابقة مستندات ميناء الوجهة</li>
+            <li>حجز مكان مؤكَّد قبل <bdi>7</bdi> أيام</li>
+          </ul>
+        </article>
+        <article class="svc" data-reveal>
+          <span class="svc__tag num">ROAD</span>
+          <h3>النقل البرّي</h3>
+          <p>أسطول داخلي يربط الميناء بالمستودع والموقع، وحلول ثقيلة لمواقع الإنشاء والمصانع برافعة على المركبة.</p>
+          <ul>
+            <li>نقل حاويات ومقطورات مسطّحة</li>
+            <li>نوافذ تسليم بساعتين داخل الدوحة</li>
+            <li>إثبات تسليم بالتوقيع والصورة</li>
+          </ul>
+        </article>
+        <article class="svc" data-reveal>
+          <span class="svc__tag num">BONDED</span>
+          <h3>التخزين الجمركي</h3>
+          <p>مستودع مؤقَّت داخل المنطقة الجمركية يعلّق الرسوم حتى الإفراج، مع جرد لحظي على مستوى النقلة.</p>
+          <ul>
+            <li>رفوف مرمّزة ومساحة مكيّفة</li>
+            <li>تعبئة وإعادة تأصص لحسابك</li>
+            <li>دقّة جرد <bdi>99.4%</bdi></li>
+          </ul>
+        </article>
+        <article class="svc" data-reveal>
+          <span class="svc__tag num">CLEARANCE</span>
+          <h3>التخليص الجمركي</h3>
+          <p>مراجعة المستندات قبل الوصول، وتقديم إلكتروني للبيان، ومتابعة حتى صدور الموافقة وخروج الشحنة من البوابة.</p>
+          <ul>
+            <li>تدقيق الرموز والفواتير مسبقًا</li>
+            <li>حساب الرسوم والضريبة قبل الوصول</li>
+            <li>سجل محفوظ <bdi>5</bdi> سنوات للاستخراج</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- NETWORK / LANES -->
+  <section class="section section--steel" id="network">
+    <div class="wrap">
+      <p class="eyebrow">الخطوط والتغذية</p>
+      <h2 class="section__title">شبكة مباشرة وناقلات تغذية من ميناء حمد.</h2>
+      <div class="net">
+        <div class="net__table" data-reveal>
+          <table class="lanes">
+            <thead>
+              <tr>
+                <th scope="col">خط السير</th>
+                <th scope="col">زمن العبور</th>
+                <th scope="col">الوتيرة</th>
+                <th scope="col">النوع</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row"><span class="lane-route">الدوحة <span class="arrow" aria-hidden="true">←</span> جبل علي</span><small class="lane-sub">الإمارات</small></th>
+                <td><span class="lane-time"><bdi class="num">2</bdi> يوم</span><span class="lane-bar"><i style="width:11%"></i></span></td>
+                <td>يوميًا</td>
+                <td><span class="tp tp--dir">مباشر</span></td>
+              </tr>
+              <tr>
+                <th scope="row"><span class="lane-route">الدوحة <span class="arrow" aria-hidden="true">←</span> الدمام</span><small class="lane-sub">السعودية</small></th>
+                <td><span class="lane-time"><bdi class="num">3</bdi> أيام</span><span class="lane-bar"><i style="width:16%"></i></span></td>
+                <td><bdi>3</bdi> أسبوعيًا</td>
+                <td><span class="tp tp--feed">تغذية</span></td>
+              </tr>
+              <tr>
+                <th scope="row"><span class="lane-route">الدوحة <span class="arrow" aria-hidden="true">←</span> صلالة</span><small class="lane-sub">عُمان</small></th>
+                <td><span class="lane-time"><bdi class="num">4</bdi> أيام</span><span class="lane-bar"><i style="width:21%"></i></span></td>
+                <td>أسبوعيًا</td>
+                <td><span class="tp tp--feed">تغذية</span></td>
+              </tr>
+              <tr>
+                <th scope="row"><span class="lane-route">الدوحة <span class="arrow" aria-hidden="true">←</span> جدة</span><small class="lane-sub">السعودية · البحر الأحمر</small></th>
+                <td><span class="lane-time"><bdi class="num">5</bdi> أيام</span><span class="lane-bar"><i style="width:26%"></i></span></td>
+                <td>أسبوعيًا</td>
+                <td><span class="tp tp--dir">مباشر</span></td>
+              </tr>
+              <tr>
+                <th scope="row"><span class="lane-route">الدوحة <span class="arrow" aria-hidden="true">←</span> موندرا</span><small class="lane-sub">الهند</small></th>
+                <td><span class="lane-time"><bdi class="num">6</bdi> أيام</span><span class="lane-bar"><i style="width:32%"></i></span></td>
+                <td>أسبوعيًا</td>
+                <td><span class="tp tp--dir">مباشر</span></td>
+              </tr>
+              <tr>
+                <th scope="row"><span class="lane-route">الدوحة <span class="arrow" aria-hidden="true">←</span> كولومبو</span><small class="lane-sub">سريلانكا</small></th>
+                <td><span class="lane-time"><bdi class="num">8</bdi> أيام</span><span class="lane-bar"><i style="width:42%"></i></span></td>
+                <td>أسبوعيًا</td>
+                <td><span class="tp tp--feed">تغذية</span></td>
+              </tr>
+              <tr>
+                <th scope="row"><span class="lane-route">الدوحة <span class="arrow" aria-hidden="true">←</span> جنوة</span><small class="lane-sub">إيطاليا · عبر السويس</small></th>
+                <td><span class="lane-time"><bdi class="num">17</bdi> يومًا</span><span class="lane-bar"><i style="width:89%"></i></span></td>
+                <td>شهريًا</td>
+                <td><span class="tp tp--dir">مباشر</span></td>
+              </tr>
+              <tr>
+                <th scope="row"><span class="lane-route">الدوحة <span class="arrow" aria-hidden="true">←</span> روتردام</span><small class="lane-sub">هولندا · عبر السويس</small></th>
+                <td><span class="lane-time"><bdi class="num">19</bdi> يومًا</span><span class="lane-bar"><i style="width:100%"></i></span></td>
+                <td>كل أسبوعين</td>
+                <td><span class="tp tp--dir">مباشر</span></td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="net__note">زمن العبور من الرصيف إلى الرصيف، ولا يشمل التخليص عند الوصول. الأرقام توضيحية.</p>
+        </div>
+        <figure class="net__fig" data-reveal>
+          <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Doha_West_Bay_Skyline_Qatar_Jan_2020.jpg/1920px-Doha_West_Bay_Skyline_Qatar_Jan_2020.jpg"
+               alt="أفق منطقة الخليج الغربي في الدوحة، قطر" loading="lazy" width="1920" height="1280">
+          <figcaption>الدوحة — مركز التشغيل والغرفة المشتركة للعمليات. المصدر: ويكيميديا كومنز · <span class="num">CC BY-SA 4.0</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRACKING DEMO -->
+  <section class="section" id="track">
+    <div class="wrap">
+      <p class="eyebrow">نظام تجريبي · تتبّع</p>
+      <h2 class="section__title">أدخل رقم الحاوية لترى مسارها كاملًا.</h2>
+
+      <div class="track">
+        <form class="track__form" id="trackForm" autocomplete="off" novalidate>
+          <div class="field">
+            <label for="trackInput">رقم التتبّع / رقم الحاوية</label>
+            <div class="input input--l">
+              <input id="trackInput" name="track" type="text" inputmode="latin" placeholder="MRSI-2026-4471" spellcheck="false" autocapitalize="off">
+              <button class="btn btn--solid" type="submit">تتبّع</button>
+            </div>
+          </div>
+          <div class="track__hints" aria-hidden="true">
+            <span>جرّب:</span>
+            <button class="ex" type="button" data-id="MRSI-2026-4471">MRSI-2026-4471</button>
+            <button class="ex" type="button" data-id="MRSI-2026-5502">MRSI-2026-5502</button>
+            <button class="ex" type="button" data-id="MRSI-2026-3820">MRSI-2026-3820</button>
+            <button class="ex" type="button" data-id="MRSI-2025-9014">MRSI-2025-9014</button>
+          </div>
+        </form>
+
+        <div class="track__out" id="trackOut" role="status" aria-live="polite">
+          <p class="track__placeholder">اختر رقمًا أو أدخله لبدء التتبّع.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPLIANCE / CUSTOMS NOTES -->
+  <section class="section section--steel" id="customs">
+    <div class="wrap">
+      <p class="eyebrow">الجمارك والتخليص</p>
+      <h2 class="section__title">قواعد الإفراج في قطر، مكتوبة بوضوح قبل أن تصل حمولتك.</h2>
+      <div class="customs">
+        <div class="customs__grid">
+          <article class="note" data-reveal>
+            <h3><span class="num">5%</span> — الرسم الجمركي العام</h3>
+            <p>يُحتسب الرسم العام على قيمة البضاعة شاملة التأمين والشحن <bdi>(CIF)</bdi>. تُعفى سلع محدّدة وتُطبَّق ضريبة انتقائية على أصناف معيّنة بدلًا من رسم الاستيراد.</p>
+          </article>
+          <article class="note" data-reveal>
+            <h3>الرمز المنسّق <bdi>HS</bdi></h3>
+            <p>تصنيف البند يحدّد الرسم والجهة المختصة. نراجع الرمز قبل الوصول لنوفّر عليك إعادة التصنيف وغرامة الفرق في الفاتورة.</p>
+          </article>
+          <article class="note" data-reveal>
+            <h3>تصاريح مسبقة</h3>
+            <p>السلع الغذائية والدوائية والخشبية تمرّ بجهات اختصاص إضافية. نجهّز ملف الجهة المختصة مع البيان لتفادي احتجاز الحاوية في الرصيف.</p>
+          </article>
+          <article class="note" data-reveal>
+            <h3>المنطقة الجمركية</h3>
+            <p>التخزين في المستودع المؤقَّت يعلّق استحقاق الرسم حتى تاريخ الإفراج، ويسمح بإعادة التصدير دون دفع الرسم على البضاعة العابرة.</p>
+          </article>
+        </div>
+
+        <div class="docs" data-reveal>
+          <div class="docs__fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Palletstellingen_in_een_warehouse_met_framebescherming.jpg"
+                 alt="ممرّ رفوف تخزين داخل مستودع لوجستي" loading="lazy" width="1920" height="1101">
+            <p class="docs__figcap">المستودع المؤقَّت · المصدر: ويكيميديا كومنز · <span class="num">CC BY-SA 4.0</span></p>
+          </div>
+          <div class="docs__body">
+            <h3>قائمة المستندات لإرسالية استيراد</h3>
+            <ul class="checks">
+              <li><span class="checks__ico" aria-hidden="true">✓</span> الفاتورة التجارية موقّعة ومطابقة للحمولة</li>
+              <li><span class="checks__ico" aria-hidden="true">✓</span> بوليصة الشحن <bdi>(B/L)</bdi> أو بيان التسليم البحري</li>
+              <li><span class="checks__ico" aria-hidden="true">✓</span> شهادة المنشأ للسلع الخاضعة لها</li>
+              <li><span class="checks__ico" aria-hidden="true">✓</span> قائمة التعبئة على مستوى كل طرد</li>
+              <li><span class="checks__ico" aria-hidden="true">✓</span> تصريح الجهة المختصة عند الحاجة</li>
+            </ul>
+            <p class="customs__disc">معلومات توضيحية لنموذج تصميم؛ المرجع الرسمي هو الهيئة العامة للجمارك في قطر.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAPABILITY BAND (photos + stats) -->
+  <section class="cap" aria-labelledby="h-cap">
+    <div class="wrap">
+      <p class="eyebrow eyebrow--light">البنية التشغيلية</p>
+      <h2 class="cap__title" id="h-cap">ما نملكه على الأرض ليخرج جدولنا كما هو مكتوب.</h2>
+      <div class="cap__figs">
+        <figure class="cap__fig" data-reveal>
+          <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Teal_Striped_Container_Cranes_at_Tanjung_Pelepas_Port_Ver2.jpg/1920px-Teal_Striped_Container_Cranes_at_Tanjung_Pelepas_Port_Ver2.jpg"
+               alt="رافعات جسرية فوق صفحاويات حاويات في محطة ميناء" loading="lazy" width="1920" height="1134">
+          <figcaption>رافعات رصيف <bdi>STS</bdi></figcaption>
+        </figure>
+        <figure class="cap__fig" data-reveal>
+          <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Container-Terminal_Bremerhaven_02.jpg/1920px-Container-Terminal_Bremerhaven_02.jpg"
+               alt="ساحة حاويات مكدّسة في محطة موانئ" loading="lazy" width="1920" height="1596">
+          <figcaption>ساحة التجميع والتخزين</figcaption>
+        </figure>
+        <figure class="cap__fig" data-reveal>
+          <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Cosco_Shipping_Star_-_IMO_9795658_-_moored_at_Container_Terminal_Tollerort%2C_Hamburg-9357.jpg/1920px-Cosco_Shipping_Star_-_IMO_9795658_-_moored_at_Container_Terminal_Tollerort%2C_Hamburg-9357.jpg"
+               alt="سفينة حاويات راسية عند رصيف المحطة" loading="lazy" width="1920" height="1280">
+          <figcaption>أرصفة رسو السفن</figcaption>
+        </figure>
+      </div>
+      <dl class="cap__stats">
+        <div class="stat"><dd><bdi class="num">24</bdi></dd><dt>رافعة جسرية على الأرصفة</dt></div>
+        <div class="stat"><dd><bdi class="num">1.9M</bdi></dd><dt>حاوية سنويًا <bdi>TEU</bdi> (توضيحي)</dt></div>
+        <div class="stat"><dd><bdi class="num">120,000</bdi> <span class="unit">م²</span></dd><dt>مساحة مستودعات مؤقَّتة</dt></div>
+        <div class="stat"><dd><bdi class="num">14.5</bdi> <span class="unit">م</span></dd><dt>عمق الغاطس عند الرصيف</dt></div>
+        <div class="stat"><dd><bdi class="num">80</bdi></dd><dt>مركبة في الأسطول الداخلي</dt></div>
+        <div class="stat"><dd><bdi class="num">24/7</bdi></dd><dt>غرفة عمليات مفتوحة</dt></div>
+      </dl>
+      <p class="cap__attr">صور: ويكيميديا كومنز — رافعات تانجونغ بيليباس <span class="num">CC BY-SA 4.0</span> · محطة بريمرهافن <span class="num">CC BY-SA 3.0</span> · سفينة في هامبورغ <span class="num">CC BY-SA 4.0</span></p>
+      <p class="cap__note">الأرقام أرقام عرض توضيحية، لا إحصاء تشغيلي رسمي.</p>
+    </div>
+  </section>
+
+  <!-- FREIGHT ESTIMATOR -->
+  <section class="section" id="estimate">
+    <div class="wrap">
+      <p class="eyebrow">نظام تجريبي · تسعير</p>
+      <h2 class="section__title">احسب سعر الشحن كما تحسبه غرفة العمليات.</h2>
+      <div class="est">
+        <div class="est__intro">
+          <p>الأداة تُطبِّق الوزن المعتمد <bdi>(W/M)</bdi>: يُقارَن الوزن الفعلي بالوزن الحجمي، ويُحاسب الأعلى. معامل الحجم هنا <bdi>1000</bdi> كجم لكل متر مكعّب، أي <bdi>1</bdi> طن لكل متر مكعّب.</p>
+          <ul class="rules">
+            <li><span>الوزن الحجمي</span><em>الحجم (م³) × <bdi class="num">1</bdi> طن</em></li>
+            <li><span>الوزن المعتمد</span><em>الأعلى من الفعلي والحجمي</em></li>
+            <li><span>العملة</span><em>ريال قطري <bdi class="num">QAR</bdi></em></li>
+            <li><span>السداد</span><em>قبل الإفراج</em></li>
+          </ul>
+          <p class="est__disc">تقدير مبدئي داخل المتصفح ولا يُعد عرضًا مُلزِمًا؛ يُثبَّت السعر بعد تأكيد الحجز وأسعار الوقود وقت الرحلة.</p>
+        </div>
+
+        <form class="est__form" id="estForm" autocomplete="off">
+          <fieldset class="est__types">
+            <legend>نوع الحمولة</legend>
+            <div class="types" role="radiogroup" aria-label="نوع الحمولة">
+              <label class="type"><input type="radio" name="cargo" value="c20"><span>حاوية <bdi>20</bdi> قدم</span></label>
+              <label class="type"><input type="radio" name="cargo" value="c40"><span>حاوية <bdi>40</bdi> قدم</span></label>
+              <label class="type"><input type="radio" name="cargo" value="lcl" checked><span>حجمي <bdi>LCL</bdi></span></label>
+              <label class="type"><input type="radio" name="cargo" value="bulk"><span>سائب</span></label>
+            </div>
+          </fieldset>
+
+          <div class="est__row">
+            <div class="field">
+              <label for="wt">الوزن الفعلي</label>
+              <div class="input"><input id="wt" name="wt" type="number" inputmode="decimal" min="0" step="0.1" value="4"><span class="unit-tag">طن</span></div>
+            </div>
+            <div class="field">
+              <label for="vol">الحجم</label>
+              <div class="input"><input id="vol" name="vol" type="number" inputmode="decimal" min="0" step="0.5" value="6"><span class="unit-tag">م³</span></div>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="lane">خط السير</label>
+            <div class="input input--select">
+              <select id="lane" name="lane">
+                <option value="jebel_ali">الدوحة ← جبل علي (الإمارات)</option>
+                <option value="dammam">الدوحة ← الدمام (السعودية)</option>
+                <option value="salalah">الدوحة ← صلالة (عُمان)</option>
+                <option value="jeddah">الدوحة ← جدة (السعودية)</option>
+                <option value="mundra" selected>الدوحة ← موندرا (الهند)</option>
+                <option value="colombo">الدوحة ← كولومبو (سريلانكا)</option>
+                <option value="genoa">الدوحة ← جنوة (إيطاليا)</option>
+                <option value="rotterdam">الدوحة ← روتردام (هولندا)</option>
+              </select>
+            </div>
+          </div>
+
+          <fieldset class="est__addons">
+            <legend>خدمات إضافية</legend>
+            <label class="add"><input type="checkbox" id="adClear" checked><span>تخليص جمركي عند الوصول</span><b class="num">650</b></label>
+            <label class="add"><input type="checkbox" id="adIns"><span>تأمين على الحمولة</span><b>نسبة من الأساس</b></label>
+            <label class="add"><input type="checkbox" id="adDel" checked><span>توصيل إلى الباب داخل الدوحة</span><b class="num">480</b></label>
+          </fieldset>
+        </form>
+
+        <div class="est__out" id="estOut" aria-live="polite">
+          <div class="est__cw">
+            <div class="est__cw-row"><span>الوزن الفعلي</span><span class="cw-val" id="cwActual"><bdi class="num">4.0</bdi> طن</span></div>
+            <div class="est__cw-row"><span>الوزن الحجمي <small id="cwVolFormula">الحجم × 1 طن/م³</small></span><span class="cw-val" id="cwVol"><bdi class="num">6.0</bdi> طن</span></div>
+            <div class="est__cw-win"><span>الوزن المعتمد <bdi class="num">W/M</bdi></span><span class="cw-val" id="cwCharge"><bdi class="num">6.0</bdi> طن</span></div>
+          </div>
+          <div class="est__calc" id="estLines"></div>
+          <div class="est__total">
+            <div class="est__total-row"><span>الإجمالي التقديري</span><strong class="num" id="estTotal">—</strong></div>
+            <div class="est__range">المدى المتوقع: <bdi class="num" id="estLow">—</bdi> – <bdi class="num" id="estHigh">—</bdi> <span class="cur">QAR</span></div>
+          </div>
+          <p class="est__cap" id="estCap">—</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VOICES -->
+  <section class="section section--steel" id="voices">
+    <div class="wrap">
+      <p class="eyebrow">من داخل الشحن</p>
+      <h2 class="section__title">ما تغيّر لشركائنا بعد الربع الأول.</h2>
+      <div class="quotes">
+        <figure class="quote" data-reveal>
+          <blockquote>جدول الوصول صار يُنفَّذ كما هو مكتوب. في موسم الذروة لم تُحوَّل أي من شحناتنا إلى مرفأ وسيط، وهذا وحده غيّر طريقة تسعيرنا للتجزئة.</blockquote>
+          <figcaption><span class="mono-av" aria-hidden="true">هـ.ج</span><b>هيئة إدارة — الفيّحاء للتجزئة</b><i>شحنة استيراد شهرية</i></figcaption>
+        </figure>
+        <figure class="quote" data-reveal>
+          <blockquote>المستندات تُراجَع قبل الرسو، فنستلم البضاعة مساء اليوم نفسه. صار التوصيل للموقع عنصرًا نَعِدُ به العميل، لا عنصر اعتذار.</blockquote>
+          <figcaption><span class="mono-av" aria-hidden="true">س.م</span><b>قسم المشتريات — سنا للمقاولات</b><i>مواقع إنشاء في الخور</i></figcaption>
+        </figure>
+        <figure class="quote" data-reveal>
+          <blockquote>الوزن المعتمد والسعر ظهر لي قبل الحجز في حاسبة الشحن، فقلت الفوارق مع المورد من أول مكالمة. لا مفاجآت في الفاتورة الآن.</blockquote>
+          <figcaption><span class="mono-av" aria-hidden="true">إ.ط</span><b>العمليات — الإمداد الطبي الحديث</b><i>تجهيزات مخبرية</i></figcaption>
+        </figure>
+      </div>
+      <p class="voices__disc">الجهات والشخصيات تمثيلية لأغراض العرض؛ الأسماء الرمزية ليست أشخاصًا حقيقيين.</p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="wrap cta__inner">
+      <h2>لديك حاوية في الطريق؟ احجز لها مكانًا في الرحلة القادمة.</h2>
+      <p>حدّد الوجهة ونافذة الاستلام، ونعيد لك مسارًا مكتوبًا: الخط، والرصيف، وزمن التخليص المقدَّر، وسعر العقد الواحد.</p>
+      <div class="cta__actions">
+        <a class="btn btn--solid btn--lg" href="#estimate">افتح حاسبة الشحن</a>
+        <a class="btn btn--line-light" href="#network">راجع الخطوط والمواعيد</a>
+      </div>
+      <p class="cta__room">غرفة العمليات · <span class="num">ops@marasi.qa</span> · <span class="num">+974 4400 0000</span> <em>(غير مُفعَّل — نموذج عرض)</em></p>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__grid">
+    <div class="footer__brand">
+      <span class="brand__name">مَراسي</span>
+      <p>مشغّل لوجستيات بحرية وبرّية في الدوحة، قطر — من الرصيف إلى الباب بعقد واحد.</p>
+      <p class="footer__loc">المحطة <span class="num">3</span> · رصيف <span class="num">B</span> — ميناء حمد · الدوحة</p>
+    </div>
+    <nav class="footer__col" aria-label="الخدمات">
+      <h4>الخدمات</h4>
+      <a href="#services">الاستيراد والتصدير</a>
+      <a href="#services">النقل البرّي</a>
+      <a href="#services">التخزين الجمركي</a>
+      <a href="#services">التخليص الجمركي</a>
+    </nav>
+    <nav class="footer__col" aria-label="الشبكة">
+      <h4>الشبكة</h4>
+      <a href="#network">الخطوط المباشرة</a>
+      <a href="#network">ناقلات التغذية</a>
+      <a href="#track">تتبّع الشحنة</a>
+      <a href="#estimate">حاسبة الشحن</a>
+    </nav>
+    <nav class="footer__col" aria-label="الشركة">
+      <h4>الشركة</h4>
+      <a href="#">من نحن</a>
+      <a href="#">الشروط والأحكام</a>
+      <a href="#">سياسة الخصوصية</a>
+      <a href="#customs">دليل الجمارك</a>
+    </nav>
+  </div>
+  <div class="wrap footer__base">
+    <p>© <span class="num">2026</span> مَراسي — نموذج تصميم تجريبي للأغراض العرضية. جميع الأرقام والجهات والرحلات خيالية ولا تمتّ إلى أي مرفأ أو جهة رسمية بصلة.</p>
+    <p class="footer__credit">من صناعة <span class="num">Tenvora</span></p>
+    <p class="footer__attr">الصور: <a href="https://commons.wikimedia.org/wiki/Category:Container_cranes" rel="license noopener" target="_blank">ويكيميديا كومنز</a> — رافعات ومحطات حاويات وسماء الدوحة ومستودع، بتراخيص <span class="num">CC BY / CC BY-SA</span> وPublic Domain.</p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
